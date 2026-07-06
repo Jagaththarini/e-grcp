@@ -13,13 +13,11 @@ npm run build      # Production build
 
 ## 🔑 Demo Credentials
 
-| Role       | Email                          | Password       |
-|------------|-------------------------------|----------------|
-| Admin      | alice.johnson@company.com      | Admin@123      |
-| Manager    | bob.smith@company.com          | Manager@123    |
-| Employee   | carol.white@company.com        | Employee@123   |
-| Auditor    | david.brown@company.com        | Auditor@123    |
-| Compliance | emma.davis@company.com         | Compliance@123 |
+| **Role**               | **Name**        | **Email**                 | **Password**     |
+| ---------------------- | --------------- | ------------------------- | ---------------- |
+| **Admin**              | Michael Johnson | `mrs.johnson@egrcp.com`   | `Admin@123`      |
+| **Manager**            | Michael Brown   | `michael.brown@egrcp.com` | `Manager@123`    |
+| **Compliance Officer** | Emma Davis      | `emma.davis@egrcp.com`    | `Compliance@123` |
 
 ## 📁 Project Structure
 
@@ -50,37 +48,61 @@ src/
 └── theme/              # MUI light/dark themes
 ```
 
-## 🧩 Modules
-
-| Module | Description |
-|--------|-------------|
-| Authentication | Login, Forgot Password, Reset Password, Session Expired |
-| Executive Dashboard | KPI cards, procurement trends, risk trends, activity timeline |
-| Procurement Workspace | Request list with filters, detail view with tabs, create form |
-| Vendor Governance | Vendor grid/cards, profiles with documents & history |
-| Risk Center | Risk register, heat matrix, distribution pie chart |
-| Compliance Center | Violations, missing documents, expired certifications |
-| Audit Center | Audit history, user activities, system logs |
-| Approval Workbench | Queued approvals with approve/reject dialogs |
-| Notification Center | Priority notifications with read/unread state |
-| Reporting Center | Charts, tables, CSV export, saved reports |
-| User Settings | Profile, theme, preferences, security/2FA |
-
 ## 🏗 Architecture
 
-- **State Management**: Redux Toolkit with 10 slices, redux-persist for auth + UI
-- **Routing**: React Router v6 with protected routes, role-based access, lazy loading
-- **API Layer**: Mock services simulating async API calls with delays
-- **Theming**: MUI v6 with full light/dark mode support
-- **Performance**: React.memo, useMemo, useCallback, lazy imports on all routes
-- **Error Handling**: Global ErrorBoundary, API error handling, form validation (Yup)
+                          +----------------------+
+                          |        User          |
+                          +----------+-----------+
+                                     |
+                                     v
+                    +-------------------------------+
+                    |      React UI Components      |
+                    |  (Dashboard, Vendors, Risk,   |
+                    |  Compliance, Audit, etc.)     |
+                    +---------------+---------------+
+                                    |
+                                    v
+                    +-------------------------------+
+                    |       React Router v6         |
+                    | Protected & Role-Based Routes |
+                    +---------------+---------------+
+                                    |
+                                    v
+                    +-------------------------------+
+                    |      Redux Toolkit Store      |
+                    |     (Global State Store)      |
+                    +---------------+---------------+
+                                    |
+           +------------------------+------------------------+
+           |                        |                        |
+           v                        v                        v
 
-## 🧪 Testing
-
-```bash
-npm test                    # Run all tests with coverage
-```
-
-- 8 test suites, 50 tests
-- Covers: Redux slices, services, React components
-- Framework: Jest + React Testing Library
++-------------------+ +-------------------+ +-------------------+
+| Dashboard Slice | | Procurement Slice | | Vendor Slice |
++-------------------+ +-------------------+ +-------------------+
+| | |
++------------+-----------+-----------+------------+
+| |
+v v
++-----------------------------------------+
+| Service Layer |
+| (dashboardService, vendorService, |
+| procurementService, riskService...) |
++--------------------+--------------------+
+|
+v
++-----------------------------------------+
+| Mock JSON Data / Local Storage |
+| users.json, vendors.json, requests.json |
+| risks.json, compliance.json, etc. |
++--------------------+--------------------+
+|
+v
++-------------------------------+
+| Updated Redux Store |
++---------------+---------------+
+|
+v
++-------------------------------+
+| React Components Re-render |
++-------------------------------+
