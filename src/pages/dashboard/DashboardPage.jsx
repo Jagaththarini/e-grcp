@@ -144,49 +144,64 @@ function DashboardPage() {
       <Grid container spacing={3}>
         {/* Department Spend */}
         <Grid item xs={12} md={6} lg={4}>
-          <Card sx={cardStyle}>
-            <CardContent>
-              <Typography variant="h6" fontWeight={600} mb={3}>Department Spending</Typography>
-              <ResponsiveContainer width="100%" height={260}>
-                <PieChart>
-                  <Pie data={departmentSpend} cx="50%" cy="50%" innerRadius={65} outerRadius={90} dataKey="spend" nameKey="department" paddingAngle={5} stroke="none">
-                    {departmentSpend.map((_, idx) => <Cell key={idx} fill={COLORS[idx % COLORS.length]} />)}
-                  </Pie>
-                  <Tooltip 
-                    formatter={(value) => `$${value.toLocaleString()}`}
-                    contentStyle={{ borderRadius: 8, border: 'none', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}
-                  />
-                  <Legend iconType="circle" layout="vertical" verticalAlign="middle" align="right" wrapperStyle={{ fontSize: 12 }} />
-                </PieChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
-        </Grid>
+  <Card sx={cardStyle}>
+    <CardContent>
+      <Typography variant="h6" fontWeight={600} mb={3}>
+        Department Spending
+      </Typography>
 
-        {/* Activity Timeline */}
-        <Grid item xs={12} md={6} lg={8}>
-          <Card sx={cardStyle}>
-            <CardContent>
-              <Box display="flex" justifyContent="space-between" alignItems="center" mb={1}>
-                <Typography variant="h6" fontWeight={600}>Recent Activity</Typography>
-                <Chip label={`${activityTimeline.length} events`} size="small" variant="outlined" />
-              </Box>
-              <Typography variant="caption" color="text.secondary">Latest system events and actions</Typography>
-              <Divider sx={{ my: 2 }} />
-              
-              {/* Scrollable area to maintain uniform card height */}
-              <Box sx={{ maxHeight: 220, overflowY: 'auto', pr: 1, '&::-webkit-scrollbar': { width: '6px' }, '&::-webkit-scrollbar-thumb': { bgcolor: 'grey.300', borderRadius: '4px' } }}>
-                {activityTimeline.length > 0 ? (
-                  activityTimeline.map(item => <ActivityItem key={item.id} item={item} />)
-                ) : (
-                  <Typography variant="body2" color="text.secondary" textAlign="center" py={4}>
-                    No recent activity to display.
-                  </Typography>
-                )}
-              </Box>
-            </CardContent>
-          </Card>
-        </Grid>
+      <ResponsiveContainer width="100%" height={320}>
+        <PieChart>
+          <Pie
+            data={departmentSpend}
+            dataKey="spend"
+            nameKey="department"
+            cx="50%"
+            cy="45%"
+            innerRadius="45%"
+            outerRadius="70%"
+            paddingAngle={3}
+            label={({ percent }) =>
+              `${(percent * 100).toFixed(0)}%`
+            }
+          >
+            {departmentSpend.map((entry, index) => (
+              <Cell
+                key={index}
+                fill={COLORS[index % COLORS.length]}
+              />
+            ))}
+          </Pie>
+
+          <Tooltip
+            formatter={(value) => [
+              `$${Number(value).toLocaleString()}`,
+              "Spend",
+            ]}
+            contentStyle={{
+              borderRadius: 10,
+              border: "none",
+              boxShadow: "0 4px 12px rgba(0,0,0,.15)",
+            }}
+          />
+
+          <Legend
+            layout="horizontal"
+            verticalAlign="bottom"
+            align="center"
+            iconType="circle"
+            wrapperStyle={{
+              paddingTop: 20,
+              fontSize: 12,
+            }}
+          />
+        </PieChart>
+      </ResponsiveContainer>
+    </CardContent>
+  </Card>
+</Grid>
+
+        
       </Grid>
     </Box>
   );
