@@ -367,3 +367,13 @@ Enterprise Governance, Risk, Compliance & Procurement Platform (e-GRCP)
 React | Redux Toolkit | Material UI | Axios | React Router | Enterprise Application
 
 ---
+
+# Deployment and GitHub Link
+
+## GitHub Repository URL:
+
+https://github.com/Jagaththarini/e-grcp.git
+
+## Live Vercel URL:
+
+https://e-grcp-puce.vercel.app
