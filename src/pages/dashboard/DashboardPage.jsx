@@ -11,7 +11,7 @@ import {
   alpha
 } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux';
-import { ResponsiveContainer, AreaChart, Area, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, PieChart, Pie, Cell, CartesianGrid } from 'recharts';
+import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, Legend, PieChart, Pie, Cell, CartesianGrid } from 'recharts';
 import { fetchDashboardData } from '../../store/slices/dashboardSlice';
 import KpiCard from '../../components/common/KpiCard';
 import SectionHeader from '../../components/common/SectionHeader';
@@ -56,7 +56,6 @@ function DashboardPage() {
   const { 
     kpis, 
     procurementTrend = [], 
-    riskTrend = [], 
     departmentSpend = [], 
     activityTimeline = [], 
     loading 
@@ -107,7 +106,7 @@ function DashboardPage() {
 
       <Grid container spacing={3} mb={4}>
         {/* Procurement Trend */}
-        <Grid item xs={12} lg={8}>
+        <Grid item xs={12}>
           <Card sx={cardStyle}>
             <CardContent>
               <Typography variant="h6" fontWeight={600} mb={3}>Monthly Procurement Trend</Typography>
@@ -136,26 +135,6 @@ function DashboardPage() {
                   <Area type="monotone" dataKey="pending" stroke="#ED6C02" fill="url(#colorPending)" strokeWidth={3} name="Pending" />
                   <Area type="monotone" dataKey="rejected" stroke="#D32F2F" fill="url(#colorRejected)" strokeWidth={3} name="Rejected" />
                 </AreaChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* Risk Trend */}
-        <Grid item xs={12} lg={4}>
-          <Card sx={cardStyle}>
-            <CardContent>
-              <Typography variant="h6" fontWeight={600} mb={3}>Risk Management</Typography>
-              <ResponsiveContainer width="100%" height={260}>
-                <BarChart data={riskTrend} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke={alpha('#000', 0.1)} />
-                  <XAxis dataKey="month" tick={{ fontSize: 12, fill: '#666' }} axisLine={false} tickLine={false} />
-                  <YAxis tick={{ fontSize: 12, fill: '#666' }} axisLine={false} tickLine={false} />
-                  <Tooltip cursor={{ fill: 'rgba(0,0,0,0.04)' }} contentStyle={{ borderRadius: 8 }} />
-                  <Legend iconType="circle" wrapperStyle={{ paddingTop: 10 }} />
-                  <Bar dataKey="open" fill="#D32F2F" name="Open Risks" radius={[4, 4, 0, 0]} maxBarSize={40} />
-                  <Bar dataKey="mitigated" fill="#2E7D32" name="Mitigated" radius={[4, 4, 0, 0]} maxBarSize={40} />
-                </BarChart>
               </ResponsiveContainer>
             </CardContent>
           </Card>
