@@ -11,6 +11,7 @@ import {
   InputAdornment,
   IconButton,
   Divider,
+  CircularProgress,
 } from "@mui/material";
 
 import { useForm } from "react-hook-form";
@@ -45,9 +46,12 @@ function LoginPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { loading, error, isAuthenticated } = useSelector(
-    (state) => state.auth
-  );
+  const {
+    loading,
+    error,
+    isAuthenticated,
+    user,
+  } = useSelector((state) => state.auth);
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -60,10 +64,33 @@ function LoginPage() {
   });
 
   useEffect(() => {
-    if (isAuthenticated) {
-      navigate("/dashboard", { replace: true });
+    if (!isAuthenticated || !user) return;
+
+    switch (user.role) {
+      case "Admin":
+        navigate("/dashboard", { replace: true });
+        break;
+
+      case "Risk Manager":
+        navigate("/risks", { replace: true });
+        break;
+
+      case "Procurement Manager":
+        navigate("/procurement", { replace: true });
+        break;
+
+      case "Auditor":
+        navigate("/audits", { replace: true });
+        break;
+
+      case "Employee":
+        navigate("/employee", { replace: true });
+        break;
+
+      default:
+        navigate("/dashboard", { replace: true });
     }
-  }, [isAuthenticated, navigate]);
+  }, [isAuthenticated, user, navigate]);
 
   useEffect(() => {
     return () => dispatch(clearError());
@@ -73,26 +100,24 @@ function LoginPage() {
     dispatch(loginUser(data));
   };
 
-  return (
-    <Box
+  return (    <Box
       sx={{
         minHeight: "100vh",
-        background:
-          "linear-gradient(135deg,#0F766E 0%,#1D4ED8 100%)",
+        background: "linear-gradient(135deg,#0F766E 0%,#1D4ED8 100%)",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         p: 2,
       }}
     >
-      <Box sx={{ width: "100%", maxWidth: 450 }}>
+      <Box sx={{ width: "100%", maxWidth: 480 }}>
         <Box textAlign="center" mb={3}>
           <Box
             sx={{
-              width: 70,
-              height: 70,
+              width: 72,
+              height: 72,
               borderRadius: "50%",
-              backgroundColor: "#fff",
+              bgcolor: "#fff",
               display: "inline-flex",
               alignItems: "center",
               justifyContent: "center",
@@ -102,7 +127,7 @@ function LoginPage() {
             <LockOutlinedIcon
               sx={{
                 color: "#0F766E",
-                fontSize: 34,
+                fontSize: 36,
               }}
             />
           </Box>
@@ -124,7 +149,7 @@ function LoginPage() {
         </Box>
 
         <Card
-          elevation={10}
+          elevation={12}
           sx={{
             borderRadius: 4,
           }}
@@ -135,14 +160,14 @@ function LoginPage() {
               fontWeight={700}
               gutterBottom
             >
-              Sign In
+              Welcome Back
             </Typography>
 
             <Typography
               color="text.secondary"
               mb={3}
             >
-              Login to access your dashboard.
+              Sign in to continue.
             </Typography>
 
             {error && (
@@ -158,9 +183,7 @@ function LoginPage() {
               <TextField
                 fullWidth
                 label="Email"
-                type="email"
                 autoComplete="email"
-                autoFocus
                 {...register("email")}
                 error={!!errors.email}
                 helperText={errors.email?.message}
@@ -170,26 +193,19 @@ function LoginPage() {
               <TextField
                 fullWidth
                 label="Password"
-                type={
-                  showPassword
-                    ? "text"
-                    : "password"
-                }
+                type={showPassword ? "text" : "password"}
                 autoComplete="current-password"
                 {...register("password")}
                 error={!!errors.password}
                 helperText={errors.password?.message}
-                sx={{ mb: 1 }}
+                sx={{ mb: 2 }}
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
                       <IconButton
                         onClick={() =>
-                          setShowPassword(
-                            !showPassword
-                          )
+                          setShowPassword(!showPassword)
                         }
-                        edge="end"
                       >
                         {showPassword ? (
                           <VisibilityOffIcon />
@@ -218,24 +234,64 @@ function LoginPage() {
 
               <Button
                 fullWidth
-                size="large"
-                variant="contained"
                 type="submit"
+                variant="contained"
+                size="large"
                 disabled={loading}
                 sx={{
-                  py: 1.4,
+                  py: 1.5,
                   borderRadius: 2,
                 }}
               >
-                {loading
-                  ? "Signing In..."
-                  : "Sign In"}
+                {loading ? (
+                  <>
+                    <CircularProgress
+                      size={20}
+                      color="inherit"
+                      sx={{ mr: 1 }}
+                    />
+                    Signing In...
+                  </>
+                ) : (
+                  "Sign In"
+                )}
               </Button>
             </Box>
 
             <Divider sx={{ my: 3 }} />
 
-            
+            <Typography
+              variant="subtitle2"
+              fontWeight={700}
+              gutterBottom
+            >
+              Demo Login Credentials
+            </Typography>
+
+            <Typography variant="body2">
+              <strong>Admin</strong><br />
+              admin@egrcp.com / Admin@123
+            </Typography>
+
+            <Typography variant="body2" mt={1}>
+              <strong>Risk Manager</strong><br />
+              risk@egrcp.com / Risk@123
+            </Typography>
+
+            <Typography variant="body2" mt={1}>
+              <strong>Procurement Manager</strong><br />
+              procurement@egrcp.com / Procurement@123
+            </Typography>
+
+            <Typography variant="body2" mt={1}>
+              <strong>Auditor</strong><br />
+              auditor@egrcp.com / Audit@123
+            </Typography>
+
+            <Typography variant="body2" mt={1}>
+              <strong>Employee</strong><br />
+              employee@egrcp.com / Employee@123
+            </Typography>
           </CardContent>
         </Card>
       </Box>
