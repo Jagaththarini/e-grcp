@@ -51,7 +51,7 @@ src/
 ## 🏗 Architecture Flow
 
 <p align="center">
-  <img src="egrcp-main\ChatGPT Image Jul 6, 2026, 01_33_43 PM.png" alt="e-GRCP Architecture Flow" width="900">
+  <img src="egrcp-main\architecture.png" alt="e-GRCP Architecture Flow" width="900">
 </p>
 
 ## 🧪 Testing
