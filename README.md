@@ -51,7 +51,7 @@ src/
 ## 🏗 Architecture Flow
 
 <p align="center">
-  <img src="egrcp-main\architecture.png" alt="e-GRCP Architecture Flow" width="900">
+  <img src="architecture.png" alt="e-GRCP Architecture Flow" width="900">
 </p>
 
 ## 🧪 Testing
