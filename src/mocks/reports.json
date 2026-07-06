@@ -1,0 +1,120 @@
+{
+  "procurement": {
+    "monthly": [
+      { "month": "Jan", "total": 18, "approved": 14, "rejected": 2, "pending": 2, "spend": 520000 },
+      { "month": "Feb", "total": 21, "approved": 16, "rejected": 3, "pending": 2, "spend": 610000 },
+      { "month": "Mar", "total": 24, "approved": 19, "rejected": 2, "pending": 3, "spend": 780000 },
+      { "month": "Apr", "total": 20, "approved": 15, "rejected": 3, "pending": 2, "spend": 690000 },
+      { "month": "May", "total": 28, "approved": 22, "rejected": 2, "pending": 4, "spend": 980000 },
+      { "month": "Jun", "total": 31, "approved": 24, "rejected": 3, "pending": 4, "spend": 1120000 },
+      { "month": "Jul", "total": 26, "approved": 21, "rejected": 2, "pending": 3, "spend": 940000 },
+      { "month": "Aug", "total": 30, "approved": 24, "rejected": 2, "pending": 4, "spend": 1185000 },
+      { "month": "Sep", "total": 35, "approved": 29, "rejected": 2, "pending": 4, "spend": 1340000 },
+      { "month": "Oct", "total": 33, "approved": 27, "rejected": 3, "pending": 3, "spend": 1265000 },
+      { "month": "Nov", "total": 38, "approved": 31, "rejected": 3, "pending": 4, "spend": 1490000 },
+      { "month": "Dec", "total": 42, "approved": 35, "rejected": 2, "pending": 5, "spend": 1715000 }
+    ],
+    "departmentSpend": [
+      { "department": "Information Technology", "spend": 3280000 },
+      { "department": "Engineering", "spend": 2140000 },
+      { "department": "Operations", "spend": 1965000 },
+      { "department": "Finance", "spend": 865000 },
+      { "department": "Human Resources", "spend": 455000 },
+      { "department": "Marketing", "spend": 725000 },
+      { "department": "Sales", "spend": 1040000 },
+      { "department": "Facilities", "spend": 620000 },
+      { "department": "Research & Development", "spend": 1750000 },
+      { "department": "Legal", "spend": 290000 }
+    ]
+  },
+
+  "compliance": {
+    "monthly": [
+      { "month": "Jan", "compliant": 96, "violations": 2, "pending": 2 },
+      { "month": "Feb", "compliant": 95, "violations": 2, "pending": 3 },
+      { "month": "Mar", "compliant": 94, "violations": 3, "pending": 3 },
+      { "month": "Apr", "compliant": 93, "violations": 3, "pending": 4 },
+      { "month": "May", "compliant": 92, "violations": 4, "pending": 4 },
+      { "month": "Jun", "compliant": 91, "violations": 4, "pending": 5 },
+      { "month": "Jul", "compliant": 92, "violations": 3, "pending": 5 },
+      { "month": "Aug", "compliant": 93, "violations": 3, "pending": 4 },
+      { "month": "Sep", "compliant": 94, "violations": 2, "pending": 4 },
+      { "month": "Oct", "compliant": 95, "violations": 2, "pending": 3 },
+      { "month": "Nov", "compliant": 96, "violations": 1, "pending": 3 },
+      { "month": "Dec", "compliant": 97, "violations": 1, "pending": 2 }
+    ]
+  },
+
+  "savedReports": [
+    {
+      "id": "SR001",
+      "name": "Annual Procurement Performance Report",
+      "type": "procurement",
+      "createdBy": "Alice Johnson",
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "SR002",
+      "name": "Quarter 1 Procurement Analysis",
+      "type": "procurement",
+      "createdBy": "Michael Brown",
+      "createdAt": "2026-04-03"
+    },
+    {
+      "id": "SR003",
+      "name": "Quarter 2 Procurement Analysis",
+      "type": "procurement",
+      "createdBy": "Sarah Wilson",
+      "createdAt": "2026-07-02"
+    },
+    {
+      "id": "SR004",
+      "name": "Vendor Risk Assessment Report",
+      "type": "vendor",
+      "createdBy": "Emma Davis",
+      "createdAt": "2026-08-18"
+    },
+    {
+      "id": "SR005",
+      "name": "High Risk Vendors Summary",
+      "type": "vendor",
+      "createdBy": "David Miller",
+      "createdAt": "2026-09-12"
+    },
+    {
+      "id": "SR006",
+      "name": "Compliance Audit Report - Q3",
+      "type": "compliance",
+      "createdBy": "Sophia Anderson",
+      "createdAt": "2026-10-05"
+    },
+    {
+      "id": "SR007",
+      "name": "Compliance Violations Dashboard",
+      "type": "compliance",
+      "createdBy": "Olivia Thomas",
+      "createdAt": "2026-10-28"
+    },
+    {
+      "id": "SR008",
+      "name": "Financial Procurement Summary",
+      "type": "finance",
+      "createdBy": "James Taylor",
+      "createdAt": "2026-11-15"
+    },
+    {
+      "id": "SR009",
+      "name": "Department Wise Spend Analysis",
+      "type": "analytics",
+      "createdBy": "Daniel White",
+      "createdAt": "2026-11-22"
+    },
+    {
+      "id": "SR010",
+      "name": "Executive GRCP Dashboard Report",
+      "type": "dashboard",
+      "createdBy": "Admin",
+      "createdAt": "2026-12-20"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "n001",
+    "type": "approval",
+    "priority": "high",
+    "title": "Approval Required: REQ-101",
+    "message": "Procurement request for Dell Latitude laptops is awaiting your approval.",
+    "read": false,
+    "createdAt": "2026-07-05T09:30:00Z",
+    "link": "/procurement/REQ-101"
+  },
+  {
+    "id": "n002",
+    "type": "procurement",
+    "priority": "medium",
+    "title": "New Procurement Request Submitted",
+    "message": "A request for Cisco network switches has been submitted by the IT Department.",
+    "read": false,
+    "createdAt": "2026-07-05T08:45:00Z",
+    "link": "/procurement/REQ-102"
+  },
+  {
+    "id": "n003",
+    "type": "compliance",
+    "priority": "high",
+    "title": "Compliance Violation Detected",
+    "message": "Vendor TechNova Solutions has an expired GST certificate. Immediate review is required.",
+    "read": false,
+    "createdAt": "2026-07-05T07:50:00Z",
+    "link": "/compliance"
+  },
+  {
+    "id": "n004",
+    "type": "risk",
+    "priority": "high",
+    "title": "High Risk Vendor Identified",
+    "message": "Vendor Apex Industrial Supplies has exceeded the acceptable risk threshold.",
+    "read": false,
+    "createdAt": "2026-07-04T16:20:00Z",
+    "link": "/risk"
+  },
+  {
+    "id": "n005",
+    "type": "vendor",
+    "priority": "medium",
+    "title": "Vendor Registration Approved",
+    "message": "Vertex Technologies has been successfully onboarded as an approved vendor.",
+    "read": true,
+    "createdAt": "2026-07-04T13:10:00Z",
+    "link": "/vendors/V001"
+  },
+  {
+    "id": "n006",
+    "type": "approval",
+    "priority": "medium",
+    "title": "Request Returned for Revision",
+    "message": "Procurement request REQ-103 requires an updated quotation before approval.",
+    "read": true,
+    "createdAt": "2026-07-03T15:45:00Z",
+    "link": "/procurement/REQ-103"
+  },
+  {
+    "id": "n007",
+    "type": "system",
+    "priority": "low",
+    "title": "System Maintenance Scheduled",
+    "message": "The e-GRCP platform will undergo scheduled maintenance on 10 July from 11:00 PM to 12:30 AM.",
+    "read": true,
+    "createdAt": "2026-07-03T10:00:00Z",
+    "link": "/settings/system"
+  },
+  {
+    "id": "n008",
+    "type": "escalation",
+    "priority": "high",
+    "title": "Approval Escalated",
+    "message": "REQ-104 has been automatically escalated after exceeding the approval SLA.",
+    "read": false,
+    "createdAt": "2026-07-02T17:25:00Z",
+    "link": "/approval"
+  },
+  {
+    "id": "n009",
+    "type": "vendor",
+    "priority": "medium",
+    "title": "Vendor Certificate Expiring",
+    "message": "ABC Manufacturing's ISO 27001 certification expires in 15 days.",
+    "read": false,
+    "createdAt": "2026-07-02T11:40:00Z",
+    "link": "/vendors/V003"
+  },
+  {
+    "id": "n010",
+    "type": "system",
+    "priority": "low",
+    "title": "Dashboard Updated",
+    "message": "Analytics dashboards have been refreshed with the latest procurement and compliance metrics.",
+    "read": true,
+    "createdAt": "2026-07-01T09:15:00Z",
+    "link": "/dashboard"
+  }
+]

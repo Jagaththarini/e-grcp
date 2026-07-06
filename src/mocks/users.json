@@ -1,0 +1,44 @@
+[
+  {
+    "id": "U001",
+    "name": "Michael Johnson",
+    "email": "mrs.johnson@egrcp.com",
+    "password": "Admin@123",
+    "role": "Admin",
+    "department": "Information Technology",
+    "designation": "System Administrator",
+    "avatar": "",
+    "phone": "+91 9876543210",
+    "status": "Active",
+    "createdAt": "2026-01-05T09:00:00Z",
+    "lastLogin": "2026-07-05T08:45:00Z"
+  },
+  {
+    "id": "U002",
+    "name": "Michael Brown",
+    "email": "michael.brown@egrcp.com",
+    "password": "Manager@123",
+    "role": "Manager",
+    "department": "Procurement",
+    "designation": "Procurement Manager",
+    "avatar": "",
+    "phone": "+91 9876543211",
+    "status": "Active",
+    "createdAt": "2026-01-08T10:00:00Z",
+    "lastLogin": "2026-07-05T09:15:00Z"
+  },
+  {
+    "id": "U003",
+    "name": "Emma Davis",
+    "email": "emma.davis@egrcp.com",
+    "password": "Compliance@123",
+    "role": "Compliance Officer",
+    "department": "Compliance",
+    "designation": "Senior Compliance Officer",
+    "avatar": "",
+    "phone": "+91 9876543212",
+    "status": "Active",
+    "createdAt": "2026-01-12T09:30:00Z",
+    "lastLogin": "2026-07-05T08:10:00Z"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "PR-1001",
+    "title": "Dell Latitude 7450 Laptops",
+    "requestedBy": "John Smith",
+    "department": "IT",
+    "amount": 85000,
+    "priority": "high",
+    "status": "pending",
+    "createdAt": "2026-07-01T09:30:00Z"
+  },
+  {
+    "id": "PR-1002",
+    "title": "Cisco Network Switches",
+    "requestedBy": "Sarah Johnson",
+    "department": "Infrastructure",
+    "amount": 145000,
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2026-07-02T11:20:00Z"
+  },
+  {
+    "id": "PR-1003",
+    "title": "Microsoft Azure Subscription",
+    "requestedBy": "David Miller",
+    "department": "Cloud",
+    "amount": 95000,
+    "priority": "high",
+    "status": "approved",
+    "createdAt": "2026-06-25T10:15:00Z"
+  },
+  {
+    "id": "PR-1004",
+    "title": "Oracle Database Licenses",
+    "requestedBy": "Emily Davis",
+    "department": "Database",
+    "amount": 250000,
+    "priority": "high",
+    "status": "approved",
+    "createdAt": "2026-06-20T14:45:00Z"
+  },
+  {
+    "id": "PR-1005",
+    "title": "HP Office Printers",
+    "requestedBy": "Michael Brown",
+    "department": "Administration",
+    "amount": 28000,
+    "priority": "low",
+    "status": "approved",
+    "createdAt": "2026-06-18T08:40:00Z"
+  },
+  {
+    "id": "PR-1006",
+    "title": "AWS Reserved Instances",
+    "requestedBy": "Sophia Wilson",
+    "department": "Cloud",
+    "amount": 175000,
+    "priority": "medium",
+    "status": "rejected",
+    "createdAt": "2026-06-15T13:10:00Z"
+  },
+  {
+    "id": "PR-1007",
+    "title": "NVIDIA AI Servers",
+    "requestedBy": "James Anderson",
+    "department": "AI Research",
+    "amount": 520000,
+    "priority": "high",
+    "status": "escalated",
+    "createdAt": "2026-07-03T16:30:00Z"
+  },
+  {
+    "id": "PR-1008",
+    "title": "Google Cloud BigQuery",
+    "requestedBy": "Olivia Taylor",
+    "department": "Data Analytics",
+    "amount": 120000,
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2026-07-04T09:15:00Z"
+  },
+  {
+    "id": "PR-1009",
+    "title": "VMware Enterprise License",
+    "requestedBy": "Daniel Thomas",
+    "department": "Virtualization",
+    "amount": 98000,
+    "priority": "low",
+    "status": "approved",
+    "createdAt": "2026-06-30T15:20:00Z"
+  },
+  {
+    "id": "PR-1010",
+    "title": "Lenovo ThinkCentre Desktops",
+    "requestedBy": "Robert Garcia",
+    "department": "Operations",
+    "amount": 67000,
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2026-07-05T10:00:00Z"
+  }
+]

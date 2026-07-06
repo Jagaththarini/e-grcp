@@ -1,0 +1,228 @@
+[
+  {
+    "id": "v001",
+    "name": "Dell Technologies",
+    "category": "Technology",
+    "status": "active",
+    "riskLevel": "low",
+    "country": "USA",
+    "contractValue": 450000,
+    "certificationExpiry": "2027-06-01",
+    "complianceScore": 92,
+    "contact": {
+      "name": "Michael Brown",
+      "email": "michael.brown@dell.com",
+      "phone": "+1-555-0101"
+    },
+    "documents": [
+      {
+        "id": "d1",
+        "name": "ISO 27001 Certificate",
+        "status": "valid",
+        "expiry": "2027-06-01"
+      },
+      {
+        "id": "d2",
+        "name": "SOC 2 Report",
+        "status": "valid",
+        "expiry": "2027-01-15"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-01-10",
+        "event": "Annual review completed",
+        "user": "Bob Smith"
+      },
+      {
+        "date": "2025-06-15",
+        "event": "Contract renewed",
+        "user": "Alice Johnson"
+      }
+    ],
+    "onboardedAt": "2023-03-15T08:00:00Z"
+  },
+  {
+    "id": "v002",
+    "name": "Cisco Systems",
+    "category": "Networking",
+    "status": "active",
+    "riskLevel": "medium",
+    "country": "USA",
+    "contractValue": 320000,
+    "certificationExpiry": "2026-09-30",
+    "complianceScore": 74,
+    "contact": {
+      "name": "Sarah Mills",
+      "email": "sarah.mills@cisco.com",
+      "phone": "+1-800-553-6387"
+    },
+    "documents": [
+      {
+        "id": "d3",
+        "name": "ISO 9001 Certificate",
+        "status": "expiring",
+        "expiry": "2026-09-30"
+      },
+      {
+        "id": "d4",
+        "name": "Cyber Security Compliance",
+        "status": "valid",
+        "expiry": "2026-12-31"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-02-20",
+        "event": "Risk assessment updated",
+        "user": "Emma Davis"
+      }
+    ],
+    "onboardedAt": "2022-07-20T08:00:00Z"
+  },
+  {
+    "id": "v003",
+    "name": "HP Inc.",
+    "category": "Hardware",
+    "status": "active",
+    "riskLevel": "low",
+    "country": "USA",
+    "contractValue": 85000,
+    "certificationExpiry": "2028-03-15",
+    "complianceScore": 88,
+    "contact": {
+      "name": "Emily Johnson",
+      "email": "emily.johnson@hp.com",
+      "phone": "+1-800-474-6836"
+    },
+    "documents": [
+      {
+        "id": "d5",
+        "name": "Business License",
+        "status": "valid",
+        "expiry": "2028-03-15"
+      }
+    ],
+    "history": [
+      {
+        "date": "2025-11-05",
+        "event": "Onboarding completed",
+        "user": "Alice Johnson"
+      }
+    ],
+    "onboardedAt": "2025-11-05T08:00:00Z"
+  },
+  {
+    "id": "v004",
+    "name": "Oracle Corporation",
+    "category": "Software",
+    "status": "under_review",
+    "riskLevel": "high",
+    "country": "USA",
+    "contractValue": 1200000,
+    "certificationExpiry": "2026-05-01",
+    "complianceScore": 51,
+    "contact": {
+      "name": "James Anderson",
+      "email": "james.anderson@oracle.com",
+      "phone": "+1-800-633-0738"
+    },
+    "documents": [
+      {
+        "id": "d6",
+        "name": "Security Certification",
+        "status": "expired",
+        "expiry": "2026-05-01"
+      },
+      {
+        "id": "d7",
+        "name": "SOC Compliance",
+        "status": "missing",
+        "expiry": null
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-05-10",
+        "event": "Compliance violation flagged",
+        "user": "Emma Davis"
+      },
+      {
+        "date": "2026-03-01",
+        "event": "Contract signed",
+        "user": "Bob Smith"
+      }
+    ],
+    "onboardedAt": "2024-01-12T08:00:00Z"
+  },
+  {
+    "id": "v005",
+    "name": "Microsoft",
+    "category": "Cloud",
+    "status": "active",
+    "riskLevel": "low",
+    "country": "USA",
+    "contractValue": 670000,
+    "certificationExpiry": "2027-11-20",
+    "complianceScore": 96,
+    "contact": {
+      "name": "Jennifer Taylor",
+      "email": "jennifer.taylor@microsoft.com",
+      "phone": "+1-800-642-7676"
+    },
+    "documents": [
+      {
+        "id": "d8",
+        "name": "ISO 27001 Certificate",
+        "status": "valid",
+        "expiry": "2027-11-20"
+      },
+      {
+        "id": "d9",
+        "name": "Microsoft Security Compliance",
+        "status": "valid",
+        "expiry": "2027-08-10"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-04-15",
+        "event": "Annual audit passed",
+        "user": "David Brown"
+      }
+    ],
+    "onboardedAt": "2021-09-01T08:00:00Z"
+  },
+  {
+    "id": "v006",
+    "name": "Amazon Web Services",
+    "category": "Cloud",
+    "status": "inactive",
+    "riskLevel": "high",
+    "country": "USA",
+    "contractValue": 220000,
+    "certificationExpiry": "2025-12-31",
+    "complianceScore": 38,
+    "contact": {
+      "name": "Daniel White",
+      "email": "daniel.white@amazon.com",
+      "phone": "+1-206-266-1000"
+    },
+    "documents": [
+      {
+        "id": "d10",
+        "name": "Cloud Security Certificate",
+        "status": "expired",
+        "expiry": "2025-12-31"
+      }
+    ],
+    "history": [
+      {
+        "date": "2026-01-05",
+        "event": "Contract suspended",
+        "user": "Bob Smith"
+      }
+    ],
+    "onboardedAt": "2020-05-18T08:00:00Z"
+  }
+]

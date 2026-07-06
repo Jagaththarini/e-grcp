@@ -1,0 +1,209 @@
+{
+  "risks": [
+    {
+      "id": "R001",
+      "title": "Vendor Bankruptcy Risk",
+      "category": "Vendor",
+      "likelihood": 5,
+      "impact": 5,
+      "score": 25,
+      "status": "Open",
+      "owner": "Michael Brown",
+      "vendorId": "V001",
+      "createdAt": "2026-01-12"
+    },
+    {
+      "id": "R002",
+      "title": "Cybersecurity Vulnerability",
+      "category": "Technology",
+      "likelihood": 4,
+      "impact": 5,
+      "score": 20,
+      "status": "Mitigated",
+      "owner": "Alice Johnson",
+      "vendorId": "V002",
+      "createdAt": "2026-02-08"
+    },
+    {
+      "id": "R003",
+      "title": "GDPR Compliance Failure",
+      "category": "Compliance",
+      "likelihood": 4,
+      "impact": 5,
+      "score": 20,
+      "status": "Open",
+      "owner": "Emma Davis",
+      "vendorId": "V003",
+      "createdAt": "2026-02-21"
+    },
+    {
+      "id": "R004",
+      "title": "Delayed Raw Material Delivery",
+      "category": "Operational",
+      "likelihood": 3,
+      "impact": 4,
+      "score": 12,
+      "status": "Open",
+      "owner": "David Miller",
+      "vendorId": "V004",
+      "createdAt": "2026-03-10"
+    },
+    {
+      "id": "R005",
+      "title": "Budget Overrun",
+      "category": "Financial",
+      "likelihood": 4,
+      "impact": 4,
+      "score": 16,
+      "status": "Accepted",
+      "owner": "Sophia Wilson",
+      "vendorId": null,
+      "createdAt": "2026-03-22"
+    },
+    {
+      "id": "R006",
+      "title": "Cloud Service Outage",
+      "category": "Technology",
+      "likelihood": 3,
+      "impact": 5,
+      "score": 15,
+      "status": "Mitigated",
+      "owner": "Emma Davis",
+      "vendorId": "V005",
+      "createdAt": "2026-04-02"
+    },
+    {
+      "id": "R007",
+      "title": "Contract Expiration",
+      "category": "Legal",
+      "likelihood": 3,
+      "impact": 4,
+      "score": 12,
+      "status": "Open",
+      "owner": "Robert Walker",
+      "vendorId": "V006",
+      "createdAt": "2026-04-18"
+    },
+    {
+      "id": "R008",
+      "title": "Supplier Quality Issues",
+      "category": "Vendor",
+      "likelihood": 4,
+      "impact": 3,
+      "score": 12,
+      "status": "Open",
+      "owner": "Grace Martin",
+      "vendorId": "V007",
+      "createdAt": "2026-05-01"
+    },
+    {
+      "id": "R009",
+      "title": "ISO 27001 Certification Expiry",
+      "category": "Compliance",
+      "likelihood": 2,
+      "impact": 5,
+      "score": 10,
+      "status": "Open",
+      "owner": "Emma Davis",
+      "vendorId": "V008",
+      "createdAt": "2026-05-15"
+    },
+    {
+      "id": "R010",
+      "title": "Single Vendor Dependency",
+      "category": "Strategic",
+      "likelihood": 3,
+      "impact": 5,
+      "score": 15,
+      "status": "Accepted",
+      "owner": "James Taylor",
+      "vendorId": "V009",
+      "createdAt": "2026-06-01"
+    },
+    {
+      "id": "R011",
+      "title": "Network Infrastructure Failure",
+      "category": "Technology",
+      "likelihood": 4,
+      "impact": 5,
+      "score": 20,
+      "status": "Open",
+      "owner": "Daniel White",
+      "vendorId": null,
+      "createdAt": "2026-06-18"
+    },
+    {
+      "id": "R012",
+      "title": "Environmental Compliance Issue",
+      "category": "Compliance",
+      "likelihood": 3,
+      "impact": 4,
+      "score": 12,
+      "status": "Mitigated",
+      "owner": "Olivia Thomas",
+      "vendorId": "V010",
+      "createdAt": "2026-07-02"
+    },
+    {
+      "id": "R013",
+      "title": "Foreign Exchange Fluctuation",
+      "category": "Financial",
+      "likelihood": 2,
+      "impact": 4,
+      "score": 8,
+      "status": "Accepted",
+      "owner": "William Scott",
+      "vendorId": null,
+      "createdAt": "2026-07-12"
+    },
+    {
+      "id": "R014",
+      "title": "Third-Party API Failure",
+      "category": "Technology",
+      "likelihood": 3,
+      "impact": 5,
+      "score": 15,
+      "status": "Open",
+      "owner": "Alice Johnson",
+      "vendorId": "V011",
+      "createdAt": "2026-08-01"
+    },
+    {
+      "id": "R015",
+      "title": "Business Continuity Risk",
+      "category": "Strategic",
+      "likelihood": 4,
+      "impact": 5,
+      "score": 20,
+      "status": "Open",
+      "owner": "Michael Brown",
+      "vendorId": null,
+      "createdAt": "2026-08-15"
+    }
+  ],
+
+  "trends": [
+    { "month": "Jan", "open": 8, "mitigated": 2, "accepted": 1 },
+    { "month": "Feb", "open": 9, "mitigated": 3, "accepted": 2 },
+    { "month": "Mar", "open": 10, "mitigated": 4, "accepted": 2 },
+    { "month": "Apr", "open": 11, "mitigated": 5, "accepted": 2 },
+    { "month": "May", "open": 12, "mitigated": 5, "accepted": 3 },
+    { "month": "Jun", "open": 13, "mitigated": 6, "accepted": 3 },
+    { "month": "Jul", "open": 14, "mitigated": 7, "accepted": 4 },
+    { "month": "Aug", "open": 13, "mitigated": 8, "accepted": 4 },
+    { "month": "Sep", "open": 12, "mitigated": 9, "accepted": 5 },
+    { "month": "Oct", "open": 11, "mitigated": 10, "accepted": 5 },
+    { "month": "Nov", "open": 10, "mitigated": 11, "accepted": 6 },
+    { "month": "Dec", "open": 9, "mitigated": 12, "accepted": 6 }
+  ],
+
+  "distribution": [
+    { "name": "Technology", "value": 4 },
+    { "name": "Compliance", "value": 3 },
+    { "name": "Vendor", "value": 2 },
+    { "name": "Financial", "value": 2 },
+    { "name": "Strategic", "value": 2 },
+    { "name": "Operational", "value": 1 },
+    { "name": "Legal", "value": 1 }
+  ]
+}
