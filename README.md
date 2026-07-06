@@ -48,61 +48,18 @@ src/
 └── theme/              # MUI light/dark themes
 ```
 
-## 🏗 Architecture
+## 🏗 Architecture Flow
 
-                          +----------------------+
-                          |        User          |
-                          +----------+-----------+
-                                     |
-                                     v
-                    +-------------------------------+
-                    |      React UI Components      |
-                    |  (Dashboard, Vendors, Risk,   |
-                    |  Compliance, Audit, etc.)     |
-                    +---------------+---------------+
-                                    |
-                                    v
-                    +-------------------------------+
-                    |       React Router v6         |
-                    | Protected & Role-Based Routes |
-                    +---------------+---------------+
-                                    |
-                                    v
-                    +-------------------------------+
-                    |      Redux Toolkit Store      |
-                    |     (Global State Store)      |
-                    +---------------+---------------+
-                                    |
-           +------------------------+------------------------+
-           |                        |                        |
-           v                        v                        v
+<p align="center">
+  <img src="C:\Users\thari\Downloads\egrcp-main\egrcp-main\ChatGPT Image Jul 6, 2026, 01_33_43 PM.png" alt="e-GRCP Architecture Flow" width="900">
+</p>
 
-+-------------------+ +-------------------+ +-------------------+
-| Dashboard Slice | | Procurement Slice | | Vendor Slice |
-+-------------------+ +-------------------+ +-------------------+
-| | |
-+------------+-----------+-----------+------------+
-| |
-v v
-+-----------------------------------------+
-| Service Layer |
-| (dashboardService, vendorService, |
-| procurementService, riskService...) |
-+--------------------+--------------------+
-|
-v
-+-----------------------------------------+
-| Mock JSON Data / Local Storage |
-| users.json, vendors.json, requests.json |
-| risks.json, compliance.json, etc. |
-+--------------------+--------------------+
-|
-v
-+-------------------------------+
-| Updated Redux Store |
-+---------------+---------------+
-|
-v
-+-------------------------------+
-| React Components Re-render |
-+-------------------------------+
+## 🧪 Testing
+
+```bash
+npm test                    # Run all tests with coverage
+```
+
+- 8 test suites, 50 tests
+- Covers: Redux slices, services, React components
+- Framework: Jest + React Testing Library
